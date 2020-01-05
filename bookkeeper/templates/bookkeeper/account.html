@@ -1,0 +1,11 @@
+{% if entry_list %}
+<ul>
+    {% for entry in entry_list %}
+    <li>{{ entry.amount }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+
+{{balance}}
