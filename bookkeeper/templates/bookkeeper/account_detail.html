@@ -1,0 +1,17 @@
+{{account.name}}|{{account.description}}
+<br>
+{% if account.entries.all %}
+<table border="1">
+    {% for entry in account.entries.all %}
+    <tr>
+        <td>{{entry.transaction.t_stamp | date:'Y-n-d H:i:s'}}</td>
+        <td>{{entry.amount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+
+<br>
+{{account.balance}}
